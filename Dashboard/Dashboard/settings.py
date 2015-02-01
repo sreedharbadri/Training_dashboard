@@ -37,6 +37,8 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'details',
+    'django_extensions',
+     'debug_toolbar',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -82,3 +84,4 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.7/howto/static-files/
 
 STATIC_URL = '/static/'
+TEMPLATES_DIR='templates'

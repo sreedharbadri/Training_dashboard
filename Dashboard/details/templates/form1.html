@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block title %}This is my contact page{% endblock %}
+{% block content %}
+ <form action="/Student_Form/" method="post">
+   {% csrf_token %}
+   {{form.as_ul}}
+ <input type="submit" value="Submit">
+ </form>
+ {% endblock %}
+
