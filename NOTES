@@ -6,8 +6,20 @@ Discussion Points Progress
 - Added Django Debug toolbar - Santosh D
 - Working on forms - Santosh D
 - Working on static files - P uday,venkatesh
+- 03-02-2015 : Completed the integration of the form with the database - Santosh D
 
 
 TODO
 
-- working on forms ( may not work) - Santosh D
+- Creation of a search form with following fields.
+a) phone number
+b) name
+Display the name of the student,phone number and course opted For.
+
+
+- Creation of a Edit form with following fields.
+a) phone number
+b) name
+Display should give us options to modify the course details.
+
+

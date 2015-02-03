@@ -14,19 +14,16 @@ def contacts_hello(request):
 
 def Student_Form(request):
     if request.method == 'POST':
-        #new = Course.objects.get(name=request.POST['course'])
-        #new1 = Enquiry.objects.get(enquiry_type=request.POST['enquiry'])
-        #Fcourse = str(new.name)
         Student.objects.create(name=request.POST['student_name'],
                                phone=request.POST['phone'],
-                               course=request.POST['course'],
-                               enquiry=request.POST['enquiry'],
-                               #new.student_set.create(course=request.POST['course']),
-                               #new1.student_set.create(enquiry_type=request.POST['enquiry']),
-                               doj=request.POST['doj'],
+                               course=Course.objects.get(name=request.POST['course']),
+                       # Notes: Student(field) = <database>.objects.get(<database_field>=request.POST['<form field>']
+                               enquiry=Enquiry.objects.get(enquiry_type=request.POST['enquiry']),
+                               doj=request.POST['doj']
+
 
         )
-        return redirect ('/hello/')
+        return redirect ('/contacts_hello/')
     else:
         form=StudentForm
         context={'form':form}
